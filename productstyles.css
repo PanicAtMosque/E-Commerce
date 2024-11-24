@@ -1,0 +1,188 @@
+/* General body styling */
+body {
+            font-family: Arial, sans-serif;
+             background-image: url("backgroundpic.jpg");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+        padding: 0;
+        }
+		
+
+/* Navigation Bar */
+.navbar {
+    background-color: #333;      /* Dark background for the navbar */
+    padding: 10px;
+    text-align: center;          /* Center-align the menu */
+}
+
+.navbar ul {
+    list-style-type: none;       /* Remove bullet points */
+    margin: 0;
+    padding: 0;
+}
+
+.navbar ul li {
+    display: inline;             /* Display the items inline */
+    margin-right: 20px;          /* Add spacing between menu items */
+}
+
+.navbar ul li a {
+    color: white;                /* White text for the menu */
+    text-decoration: none;       /* Remove underline from links */
+    font-size: 18px;
+    padding: 10px 20px;
+}
+
+.navbar ul li a:hover {
+    background-color: #555;      /* Darker background on hover */
+    border-radius: 5px;
+}
+
+/* Products section styling */
+.products-section {
+	background-image: url("C:/Users/ARWEN PAUL/OneDrive/Desktop/E-Commerce Pics/backgroundpic.jpg");
+        background-size: cover;
+        background-position: center;
+        margin: 0;
+    display:flex;
+    justify-content:flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.product {
+    display: flex; /* Enable flex layout within each product */
+    align-items: center;
+    width: 100%; /* Full width to control internal layout */
+    max-width: 800px; /* Adjust for desired width */
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+	border-color:#ffafcc;
+    padding: 15px;
+    margin: 10px;
+	height:50vh;
+    flex: 1 1 30%;
+	 background-color:#ffafcc;
+}
+
+.product img {
+    max-width: 200px;
+    height: 200px;
+    margin-right: 20px; /* Space between image and text */
+    border-radius: 5px; /* Optional: Adds a slight rounding to the image */
+}
+
+.product-content {
+    display: flex;
+    flex-direction: column; /* Stack elements vertically */
+    align-items: flex-start; /* Align text to the left */
+    text-align: left;
+}
+
+.product h2 {
+    font-size: 1.5em;
+	margin-left:5px;
+    margin-bottom: 10px;
+}
+
+.product p {
+    font-size: 1.2em;
+	margin-left:auto;
+    margin-bottom: 10px;
+}
+
+.star-rating {
+    margin-bottom: 1px;
+	margin-left:auto;
+}
+
+.product:hover {
+    transform: scale(1.05);
+}
+
+
+/* Star rating styles */
+.star-rating {
+    display: flex;
+    justify-content: center; /* Center stars horizontally */
+    cursor: pointer;
+}
+
+.star {
+    font-size: 24px;
+    color: lightgray; /* Default color for unselected stars */
+    transition: color 0.2s ease-in-out;
+}
+
+/* Highlight the stars on hover */
+.star.hover {
+    color: gold; /* Color of stars on hover */
+}
+
+/* Keep the selected stars highlighted */
+.star.selected {
+    color: gold;
+}
+
+
+
+/* Modal Styling */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5); /* Black background with opacity */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+    position: relative;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+button {
+    background-color: #a2d2ff;
+	color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+	margin-left:auto;
+	margin-right:10px;
+}
+
+button:hover {
+    background-color: #bde0fe;
+}

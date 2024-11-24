@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="contactUsStyles.css">
+</head>
+<body>
+
+    <!-- Navigation Menu (Optional) -->
+    <nav class="navbar">
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="product.html">Products</a></li>
+            <li><a href="cart.html">Cart</a></li>
+            <li><a href="aboutUs.html">About Us</a></li>
+            <li><a href="contactUs.html">Contact Us</a></li>
+			<li><a href="signUp.html">Sign Up</a></li>
+			<li><a href="login.html">login</a></li>
+			<li><a href="profile.html">Profile</a></li>
+        </ul>
+    </nav>
+
+    <!-- Contact Us Section -->
+    <section class="contact-us">
+        <div class="container">
+            <h1>Contact Us</h1>
+
+            <div class="contact-info">
+                <p>If you have any questions or inquiries, feel free to reach out to us using the information below or through the contact form.</p>
+
+                <div class="contact-details">
+                    <p><strong>Email:</strong> info@yourcompany.com</p>
+                    <p><strong>Phone:</strong> +123 456 7890</p>
+                    <p><strong>Address:</strong> 123 Your Street, Your City, Your Country</p>
+                </div>
+            </div>
+
+            <h2>Send Us a Message</h2>
+            <form action="submit_form.php" method="POST">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="5" required></textarea>
+                </div>
+
+                <button type="submit">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+<script>
+    // Function to handle Contact Us form submission
+    function saveContactMessage() {
+        const name = document.getElementById('name').value;
+        const email = document.getElementById('email').value;
+        const message = document.getElementById('message').value;
+        const formMessage = document.getElementById('form-message'); // Correctly reference the form message container
+
+        // Validate the form inputs
+        if (name === "" || email === "" || message === "") {
+            formMessage.textContent = "All fields are required!";
+            formMessage.style.color = "red";
+            return;
+        }
+
+        // Saving the contact data to localStorage
+        const contactData = {
+            name: name,
+            email: email,
+            message: message
+        };
+
+        // Store the contact data in localStorage
+        localStorage.setItem('contactData', JSON.stringify(contactData));
+
+        // Display success message and redirect
+        alert("Message sent successfully!");
+        window.location.href ='thankYou.html'; // Redirect to thank you page
+    }
+</script>
+
+
+
+	
+</body>
+</html>
+
